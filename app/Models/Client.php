@@ -7,5 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  /* relacion inversa con ClientDocument */
+  public function clientDocument()
+  {
+    return $this->belongsTo(ClientDocument::class);
+  }
+
+  /* relacion de uno a muchos con Renta */
+  public function renta()
+  {
+    return $this->hasMany(RentCar::class);
+  }
 }

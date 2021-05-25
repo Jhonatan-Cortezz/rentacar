@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ImageCar extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  /* definir relacion polimorfica */
+  public function imageable()
+  {
+    return $this->morphTo();
+  }
 }

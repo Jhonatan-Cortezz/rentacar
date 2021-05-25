@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class DetailCar extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  /* relacion inversa con car */
+  public function car(){
+    return $this->belongsTo(Car::class);
+  }
 }

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Maintenance extends Model
 {
   use HasFactory;
+
+  /* relacion inversa con Car */
+  public function car(){
+    return $this->belongsTo(Car::class);
+  }
 }

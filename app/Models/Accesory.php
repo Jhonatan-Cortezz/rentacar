@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Accesory extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  /* relacion muchos a muchos con vehiculos */
+  public function cars()
+  {
+    return $this->belongsToMany(Car::class);
+  }
 }

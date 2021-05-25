@@ -7,5 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class ClientDocument extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  /* relacion inversa con tipo de docuento */
+  public function typeDocument()
+  {
+    return $this->belongsTo(TypeDocument::class);
+  }
+
+  /* relacion de uno a muchos con cliente */
+  public function client()
+  {
+    return $this->hasMany(Client::class);
+  }
 }
