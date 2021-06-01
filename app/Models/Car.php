@@ -9,10 +9,11 @@ class Car extends Model
 {
   use HasFactory;
 
+  protected $guarded = ['id', 'created_at', 'updated_at'];
   /* relacion muchos a muchos con accesorios */
   public function accesories()
   {
-    return $this->belongsToMany(Accesory::class);
+    return $this->belongsToMany(Accesory::class, 'detail_car_accesories');
   }
 
   /* relacion polimorfica para la imagen */

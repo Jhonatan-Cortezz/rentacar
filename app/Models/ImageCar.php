@@ -9,6 +9,7 @@ class ImageCar extends Model
 {
   use HasFactory;
 
+  protected $fillable = ['url'];
   /* definir relacion polimorfica */
   public function imageable()
   {

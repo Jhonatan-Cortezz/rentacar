@@ -270,7 +270,8 @@ return [
     [
       'text' => 'Vehiculos',
       'icon' => 'fas fa-fw fa-car',
-      'url'  => '#',
+      'route'  => 'admin.cars.index',
+      'active' => ['admin/cars*']
     ],
     [
       'text' => 'Mamtenimientos',
