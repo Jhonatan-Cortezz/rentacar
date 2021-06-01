@@ -188,7 +188,7 @@ return [
     */
 
   'use_route_url' => false,
-  'dashboard_url' => 'home',
+  'dashboard_url' => '/admin',
   'logout_url' => 'logout',
   'login_url' => 'login',
   'register_url' => 'register',
@@ -242,9 +242,9 @@ return [
       'text' => 'search',
     ],
     [
-      'text' => 'blog',
-      'url'  => 'admin/blog',
-      'can'  => 'manage-blog',
+      'text' => 'Inicio',
+      'url'  => '/admin',
+      'icon' => 'fas fa-fw fa-home',
     ],
 
     /* admin user item */
@@ -280,7 +280,8 @@ return [
     [
       'text' => 'Accesorios',
       'icon' => 'fas fa-fw fa-clipboard-check',/* <i class="fas fa-clipboard-check"></i> */
-      'url' => '#',
+      'route' => 'admin.accesories.index',
+      'active' => ['admin/accesories*']
     ],
 
     /*Clientes */
