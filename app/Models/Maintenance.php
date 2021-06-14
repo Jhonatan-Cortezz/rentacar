@@ -9,6 +9,8 @@ class Maintenance extends Model
 {
   use HasFactory;
 
+  protected $guarded = ['id', 'created_at', 'updated_at'];
+
   /* relacion inversa con Car */
   public function car(){
     return $this->belongsTo(Car::class);

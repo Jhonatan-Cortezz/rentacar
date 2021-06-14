@@ -276,7 +276,8 @@ return [
     [
       'text' => 'Mamtenimientos',
       'icon' => 'fas fa-fw fa-tools',
-      'url'        => '#',
+      'route'  => 'admin.maintenances.index',
+      'active' => ['admin/maintenances*']
     ],
     [
       'text' => 'Accesorios',

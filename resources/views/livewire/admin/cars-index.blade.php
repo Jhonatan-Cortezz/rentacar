@@ -17,7 +17,7 @@
             <th>Placa</th>
             <th>Estado</th>
             <th>Capacidad</th>
-            <th colspan="2"></th>
+            <th colspan="3"></th>
           </tr>
         </thead>
 
@@ -41,6 +41,15 @@
                   <p class="text-warning">En mantenimiento</p>
                 @endif  
               <td>{{$car->capacidad}}</td>
+              <td width="10px">
+                {{-- <form action="{{route('admin.maintenances.create', $car)}}" method="POST">
+                  @csrf
+                  @method('delete')
+
+                  <button type="submit" class="btn btn-warning btn-sm"><i class="fas fa-fa-wrench"></i></button>
+                </form> --}}
+                <a class="btn btn-warning btn-sm" href="{{route('admin.maintenances.create', $car)}}"><i class="fas fa-wrench"></i></a>
+              </td>
               <td width="10px">
                 <a class="btn btn-primary btn-sm" href="{{route('admin.cars.edit', $car)}}"><i class="fas fa-edit"></i></a>
               </td>
